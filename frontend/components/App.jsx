@@ -1,8 +1,11 @@
 import React from 'react';
+import NavbarContainer from './navbar/navbar_container';
 
 const App = () => (
   <div>
-    <h1>Stitch</h1>
+    <header>
+      <NavbarContainer />
+    </header>
   </div>
 );
 

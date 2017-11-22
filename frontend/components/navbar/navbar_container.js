@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { login, signup } from '../../actions/session_actions';
-import Greeting from './greeting';
+import Navbar from './navbar';
 
 const mapStateToProps = ({ session }) => ({
-  currentUser: session
+  currentUser: session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -11,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
   login: (user) => dispatch(login(user)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Greeting);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

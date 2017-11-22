@@ -5,6 +5,7 @@ import Root from './components/root';
 
 //Testing imports
 import * as SessionAPIUtil from './util/session_api_util';
+import { signup, login, logout } from './actions/session_actions';
 //End of test imports
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //Testing window
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.signup = SessionAPIUtil.signup;
-  window.login = SessionAPIUtil.login;
-  window.logout = SessionAPIUtil.logout;
+  window.signup = signup;
+  window.login = login;
+  window.logout = logout;
   //End of test window
   ReactDOM.render(<Root store={ store } />, root);
 });

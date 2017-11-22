@@ -3,21 +3,29 @@ import { Link } from 'react-router-dom';
 
 const sessionLinks = () => (
   <div className="navbar">
-    <div className="navbar-logo">
-      <Link to="/">Stitch</Link>
-    </div>
+    <button className="navbar-logo">
+      <Link to="/"></Link>
+      Stitch
+    </button>
     <div className="navbar-auth">
-      <Link to="/login">Log in</Link>
-      <Link to="/signup">Sign up</Link>
+      <button className="navbar-button">
+        <Link to="/login"></Link>
+        Log in
+      </button>
+      <button className="navbar-button">
+        <Link to="/signup"></Link>
+        Sign up
+      </button>
     </div>
   </div>
 );
 
 const welcome = (currentUser, logout) => (
   <div className="navbar">
-    <div className="navbar-logo">
-      <Link to="/">Stitch</Link>
-    </div>
+    <button className="navbar-logo">
+      <Link to="/"></Link>
+      Stitch
+    </button>
     <div className="navbar-auth">
       <h2 className="navbar-greeting">Welcome, {currentUser.username}</h2>
       <button className="navbar-button" onClick={logout}>Log out</button>
@@ -25,8 +33,8 @@ const welcome = (currentUser, logout) => (
   </div>
 );
 
-const navbar = ({ currentUser, logout }) => (
+const Navbar = ({ currentUser, logout }) => (
   currentUser ? welcome(currentUser, logout) : sessionLinks()
 );
 
-export default navbar;
+export default Navbar;
