@@ -8,10 +8,7 @@ const sessionLinks = () => (
       Stitch
     </button>
     <div className="navbar-auth">
-      <button className="navbar-button">
-        <Link to="/login"></Link>
-        Log in
-      </button>
+      <Link to="/login"><button>Log in</button></Link>
       <button className="navbar-button">
         <Link to="/signup"></Link>
         Sign up
