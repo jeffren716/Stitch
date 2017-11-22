@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -30,6 +30,22 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  navLink() {
+    if (this.props.formType === 'signup') {
+      return (
+        <p>Already have an account?
+          <Link to='/login' className="login-form-link"> Log in </Link>
+          instead</p>
+      );
+    } else {
+      return (
+        <p>Don't have an account?
+          <Link to='/signup' className="login-form-link"> Sign up </Link>
+          instead</p>
+      );
+    }
+  }
+
   renderErrors() {
     if (this.props.errors) {
       return(
@@ -51,10 +67,13 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className='login-form-box'>
           Welcome to Stitch!
           <br/>
-          Please {formType}
-          {this.renderErrors()}
+          <h3>Please {formType}</h3>
+          <h3 className="login-form-switch">{this.navLink()}</h3>
           <div className='login-form'>
             <br/>
+            <div className="login-form-errors">
+              {this.renderErrors()}
+            </div>
             <label>Username:
               <input type='text'
                 value={this.state.username}

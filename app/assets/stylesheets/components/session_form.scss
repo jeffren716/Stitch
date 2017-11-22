@@ -1,6 +1,6 @@
 .login-form-container {
   display: flex;
-  border: 1px solid black;
+  border: 2px solid $purple;
   border-radius: 5px;
   width: 25%;
   padding: 10px;
@@ -14,8 +14,33 @@
   font-weight: 700;
 }
 
+h3 {
+  font-weight: 400;
+}
+
+.login-form-switch {
+  font-size: 16px;
+}
+
+.login-form-link {
+  text-decoration: underline;
+}
+
+.login-form-link:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
 .login-form {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 50px;
+}
+
+.login-form-errors {
+  color: red;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: $light-red;
+  text-align: center;
 }
