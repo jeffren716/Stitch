@@ -4,7 +4,7 @@ import NavbarContainer from './navbar/navbar_container';
 import SessionFormContainer from './session_form/session_form_container';
 
 const App = () => (
-  <div>
+  <div className="page">
     <header>
       <NavbarContainer />
     </header>

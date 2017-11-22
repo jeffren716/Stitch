@@ -1,3 +1,8 @@
+.bg {
+  background-image: url("https://wallup.net/wp-content/uploads/2016/05/26/193731-digital_art-Final_Fantasy_XV-Altissia.jpg");
+  height: 100%;
+}
+
 .login-form-container {
   display: flex;
   border: 2px solid $purple;
@@ -5,6 +10,7 @@
   width: 25%;
   padding: 10px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .login-form-box {
@@ -39,8 +45,5 @@ h3 {
 
 .login-form-errors {
   color: red;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: $light-red;
   text-align: center;
 }
