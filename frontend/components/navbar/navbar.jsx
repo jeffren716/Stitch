@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const sessionLinks = () => (
   <div className="navbar">
     <Link to="/">
-      <button className="navbar-logo">Stitch</button>
+      <img src="https://imgur.com/FNwqakc.png" />
     </Link>
     <div className="navbar-auth">
       <Link to="/login">
@@ -20,7 +20,7 @@ const sessionLinks = () => (
 const welcome = (currentUser, logout) => (
   <div className="navbar">
     <Link to="/">
-      <button className="navbar-logo">Stitch</button>
+      <img src="https://imgur.com/FNwqakc.png" />
     </Link>
     <div className="navbar-auth">
       <h2 className="navbar-greeting">Welcome, {currentUser.username}</h2>
