@@ -3,7 +3,6 @@ import merge from 'lodash/merge';
 
 const _nullUser = {
   currentUser: null,
-  errors: []
 };
 
 const sessionReducer = (state = _nullUser, action) => {
