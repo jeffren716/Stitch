@@ -40,7 +40,7 @@ class SessionForm extends React.Component {
             </li>
           ))}
         </ul>
-      );  
+      );
     }
   }
 
@@ -60,6 +60,7 @@ class SessionForm extends React.Component {
                 value={this.state.username}
                 onChange={this.update('username')}
                 className='login-input'
+                autoFocus
               />
             </label>
             <br/>

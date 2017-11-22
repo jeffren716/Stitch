@@ -1,0 +1,21 @@
+.navbar {
+  background-color: $purple;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar button {
+  margin: 5px;
+  margin-right: 7px;
+  padding: 7px 14px;
+  background-color: $light-purple;
+  border: none;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.navbar button:hover {
+  transition-duration: 0.5s;
+  background-color: $lightest-purple;
+}
