@@ -6,7 +6,8 @@ const mapStateToProps = (state, ownProps) => {
   return{
     currentUser: state.session.currentUser,
     errors: state.errors.session,
-    formType: ownProps.processForm
+    formType: ownProps.processForm,
+    isOpen: ownProps.isOpen
   };
 };
 

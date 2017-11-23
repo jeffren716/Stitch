@@ -14,10 +14,8 @@ class Modal extends React.Component {
     this.demo = this.demo.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
+  componentDidMount() {
+
   }
 
   update(field) {
@@ -72,7 +70,7 @@ class Modal extends React.Component {
   render() {
     let { formType } = this.props;
     return (
-      <div className='modal'>
+      <div className={this.props.isOpen ? 'modal-open' : 'modal-close'}>
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className='login-form-box'>
             Welcome to Stitch!
