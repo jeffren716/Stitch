@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let user = Object.assign({}, this.state);
-    this.props.login(user);
+    this.props.processForm(user);
   }
 
   navLink() {
