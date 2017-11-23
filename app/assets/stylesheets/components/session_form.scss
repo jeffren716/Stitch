@@ -50,3 +50,27 @@ h3 {
   color: red;
   text-align: center;
 }
+
+.login-form input {
+  margin: 2px;
+  border: 1px solid $purple;
+  font-family: 'Open Sans';
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+.login-form input:focus {
+  border: 1px solid $lightest-purple;
+  transition-duration: 0.5s;
+}
+
+#login-form-button {
+  background-color: $purple;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+#login-form-button:hover {
+  transition-duration: 0.5s;
+  background-color: $lightest-purple;
+}
