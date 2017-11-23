@@ -55,6 +55,9 @@ class Navbar extends React.Component {
     );
   }
 
+  handleCloseModal() {
+    this.setState({isOpen: false});
+  }
 
   render() {
     const Navbar = ({ currentUser, logout }) => (
@@ -68,6 +71,7 @@ class Navbar extends React.Component {
         <ModalContainer
           processForm={this.state.processForm}
           isOpen={this.state.isOpen}
+          handleCloseModal={this.handleCloseModal.bind(this)}
         />
       </div>
     );

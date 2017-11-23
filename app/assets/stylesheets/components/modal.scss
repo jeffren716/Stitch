@@ -1,21 +1,33 @@
-.bg {
-  background-image: url("https://wallup.net/wp-content/uploads/2016/05/26/193731-digital_art-Final_Fantasy_XV-Altissia.jpg");
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+.modal-close {
+  display: none;
+}
+
+.modal-open {
+  display: block;
+}
+
+.modal-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 
 .login-form-container {
-  display: flex;
-  border: 2px solid $purple;
+  display: block;
+  position: fixed;
+  top: 27%;
+  left: 37%;
+  border: 2px solid $lightest-purple;
   border-radius: 5px;
-  border-top: none;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
   width: 25%;
   padding: 10px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
+  z-index: 3;
 }
 
 .login-form-box {

@@ -7,15 +7,20 @@ class Modal extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      isOpen: this.props.isOpen
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demo = this.demo.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
-  componentDidMount() {
+  componentWillReceiveProps(nextProps) {
+    this.setState({isOpen: nextProps.isOpen});
+  }
 
+  closeModal() {
+    this.props.handleCloseModal();
   }
 
   update(field) {
@@ -28,25 +33,26 @@ class Modal extends React.Component {
     e.preventDefault();
     let demo_user = ({username: 'demo_user', password: 'password'});
     this.props.login(demo_user);
+    this.closeModal();
   }
 
   handleSubmit(e) {
     e.preventDefault();
     let user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => this.closeModal());
   }
 
   navLink() {
-    if (this.props.formType === 'signup') {
+    if (this.props.formType === 'sign up') {
       return (
         <p>Already have an account?
-          <Link to='/login' className="login-form-link"> Log in </Link>
+          <a href={this.toggleLogin}className="login-form-link"> Log in </a>
           instead</p>
       );
     } else {
       return (
         <p>Don't have an account?
-          <Link to='/signup' className="login-form-link"> Sign up </Link>
+          <a href={this.toggleSignup} className="login-form-link"> Sign up </a>
           instead</p>
       );
     }
@@ -67,10 +73,14 @@ class Modal extends React.Component {
   }
 
 
+
   render() {
     let { formType } = this.props;
     return (
-      <div className={this.props.isOpen ? 'modal-open' : 'modal-close'}>
+      <div className={this.state.isOpen ? 'modal-open' : 'modal-close'}>
+        <a onClick={this.closeModal}>
+          <div className='modal-screen'></div>
+        </a>
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className='login-form-box'>
             Welcome to Stitch!
