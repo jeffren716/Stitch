@@ -1,16 +1,20 @@
 import { connect } from 'react-redux';
-import { login, signup, logout } from '../../actions/session_actions';
-import { withRouter } from 'react-router-dom';
+import { login, signup, logout, receiveErrors } from '../../actions/session_actions';
 import Navbar from './navbar';
 
-const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+const mapStateToProps = (state) => ({
+  currentUser: state.session.currentUser,
+  loggedIn: (state.session.currentUser === null ? false : true),
+  errors: state.errors.session,
 });
 
-const mapDispatchToProps = dispatch => ({
-  signup: (user) => dispatch(signup(user)),
-  login: (user) => dispatch(login(user)),
-  logout: () => dispatch(logout())
-});
+const mapDispatchToProps = dispatch => {
+  dispatch(receiveErrors(null));
+  return {
+    signup: (user) => dispatch(signup(user)),
+    login: (user) => dispatch(login(user)),
+    logout: () => dispatch(logout())
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Modal from './modal';
 
 const sessionLinks = () => (
   <div className="navbar">
