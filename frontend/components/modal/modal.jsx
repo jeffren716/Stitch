@@ -21,6 +21,7 @@ class Modal extends React.Component {
 
   closeModal() {
     this.props.handleCloseModal();
+    this.setState({username: '', password: ''});
   }
 
   update(field) {
@@ -91,22 +92,20 @@ class Modal extends React.Component {
               <div className="login-form-errors">
                 {this.renderErrors()}
               </div>
-              <label>Username:
-                <input type='text'
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className='login-input'
-                  autoFocus
-                />
-              </label>
+              <input type='text'
+                value={this.state.username}
+                onChange={this.update('username')}
+                className='login-input'
+                autoFocus
+                placeholder='Username'
+              />
               <br/>
-              <label>Password:
-                <input type='password'
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className='login-input'
-                />
-              </label>
+              <input type='password'
+                value={this.state.password}
+                onChange={this.update('password')}
+                className='login-input'
+                placeholder='Password'
+              />
               <br/>
               <input id="login-form-button" type='submit' value="Submit" />
               <button id="login-form-button" onClick={this.demo}>
