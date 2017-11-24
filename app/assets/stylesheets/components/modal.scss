@@ -21,13 +21,19 @@
   position: fixed;
   top: 27%;
   left: 37%;
-  border: 2px solid $lightest-purple;
+  border: 2px solid $purple;
   border-radius: 5px;
   width: 25%;
   padding: 10px;
   margin: 0 auto;
   background-color: white;
   z-index: 3;
+  transition-duration: 0.5s;
+}
+
+.login-form-container:hover {
+  border: 2px solid $lightest-purple;
+  transition-duration: 0.5s;
 }
 
 .login-form-box {
@@ -67,7 +73,7 @@ h3 {
 
 .login-form input, #login-form-button {
   margin: 10px;
-  border: 1px solid $purple;
+  border: 2px solid $purple;
   font-family: 'Open Sans';
   border-radius: 5px;
   transition-duration: 0.5s;
@@ -75,7 +81,12 @@ h3 {
 }
 
 .login-form input:focus {
-  border: 1px solid $lightest-purple;
+  border: 2px solid $gray;
+  transition-duration: 0.5s;
+}
+
+.login-form input:hover {
+  border: 2px solid $gray;
   transition-duration: 0.5s;
 }
 
@@ -90,4 +101,8 @@ h3 {
 #login-form-button:hover {
   transition-duration: 0.5s;
   background-color: $lightest-purple;
+}
+
+#login-form-button:active {
+  background-color: #362955;
 }
