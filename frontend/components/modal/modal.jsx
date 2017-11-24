@@ -26,8 +26,6 @@ class Modal extends React.Component {
     }
   }
 
-
-
   escModal(e) {
     if (e.keyCode === 27) {
       e.preventDefault();
