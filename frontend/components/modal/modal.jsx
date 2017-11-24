@@ -13,10 +13,24 @@ class Modal extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demo = this.demo.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.escModal = this.escModal.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({isOpen: nextProps.isOpen});
+    if (!this.state.isOpen) {
+      document.addEventListener('keydown', this.escModal);
+    }
+  }
+
+
+
+  escModal(e) {
+    if (e.keyCode === 27) {
+      e.preventDefault();
+      this.closeModal();
+      document.removeEventListener('keydown', this.escModal);
+    }
   }
 
   closeModal() {
