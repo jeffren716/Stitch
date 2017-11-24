@@ -46,3 +46,20 @@
 .landing-container img {
   width: 188px;
 }
+
+.landing-button {
+  font-size: 16px;
+  margin: 10px;
+  background-color: $purple;
+  color: white;
+  font-family: 'Open Sans';
+  border: 2px solid $purple;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  padding: 5px 7px;
+}
+
+.landing-button:hover {
+  transition-duration: 0.5s;
+  background-color: $light-purple;
+}

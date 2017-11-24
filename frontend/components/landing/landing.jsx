@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const Landing = () => (
   <div className='landing'>
@@ -11,6 +11,9 @@ const Landing = () => (
       <p>
         Placeholder content about website that goes underneath the logo
       </p>
+      <Link to='/directory'>
+        <button className='landing-button'>Explore!</button>
+      </Link>
     </div>
   </div>
 );
