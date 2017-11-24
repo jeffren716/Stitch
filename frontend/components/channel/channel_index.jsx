@@ -6,7 +6,15 @@ class ChannelIndex extends React.Component {
 
   render() {
     return(
-      <p>Placeholder</p>
+      <iframe
+        src='http://player.twitch.tv/?channel=food'
+        height='720'
+        width='1280'
+        frameBorder='0'
+        scrolling='no'
+        allowFullScreen='true'>
+
+      </iframe>
     );
   }
 }
