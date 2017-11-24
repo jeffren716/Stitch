@@ -7,7 +7,7 @@ class ChannelIndex extends React.Component {
   render() {
     return(
       <iframe
-        src='http://player.twitch.tv/?video=187283482'
+        src='http://player.twitch.tv/?video=187283482&time=03m46s'
         height='720'
         width='1280'
         frameBorder='0'
