@@ -21,6 +21,9 @@ class Modal extends React.Component {
     if (!this.state.isOpen) {
       document.addEventListener('keydown', this.escModal);
     }
+    if (nextProps.loggedIn) {
+      this.props.history.push('/directory');
+    }
   }
 
 

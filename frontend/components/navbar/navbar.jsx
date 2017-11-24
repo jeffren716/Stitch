@@ -15,6 +15,12 @@ class Navbar extends React.Component {
     this.toggleSignup = this.toggleSignup.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
+  }
+
   toggleLogin(e) {
     e.preventDefault;
     this.setState({processForm: 'login', isOpen: true});
