@@ -16,9 +16,7 @@ class Navbar extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.loggedIn) {
-      console.log(this.props);
-      console.log(this.state);
+    if (!nextProps.loggedIn && this.props.loggedIn) {
       this.props.history.push('/');
     }
   }
