@@ -1,11 +1,11 @@
 @keyframes backgroundScroll {
   from {background-position: 0 0;}
-  to {background-position: -599px -299px;}
+  to {background-position: -599px -599px;}
 }
 
 @-webkit-keyframes backgroundScroll {
   from {background-position: 0 0;}
-  to {background-position: -599px -299px;}
+  to {background-position: -599px -599px;}
 }
 
 .splash  {
@@ -15,9 +15,9 @@
   background-repeat: repeat;
   background-attachment: fixed;
   background-repeat: repeat;
-  -webkit-animation: backgroundScroll 25s linear infinite;
+  -webkit-animation: backgroundScroll 15s linear infinite;
   -webkit-animation-fill-mode: forwards;
-  animation: backgroundScroll 25s linear infinite;
+  animation: backgroundScroll 15s linear infinite;
   animation-fill-mode: forwards;
   z-index: -1;
 }
@@ -50,16 +50,25 @@
 .landing-button {
   font-size: 16px;
   margin: 10px;
-  background-color: $purple;
+  background-color: $light-purple;
   color: white;
   font-family: 'Open Sans';
   border: 2px solid $purple;
   border-radius: 5px;
-  transition-duration: 0.5s;
   padding: 5px 7px;
+  box-shadow: 0px 5px 0px #362955;
+  transition-duration: 0.3s;
 }
 
 .landing-button:hover {
-  transition-duration: 0.5s;
-  background-color: $light-purple;
+  transition-duration: 0.3s;
+  background-color: $lightest-purple;
+  transform: translateY(-2px);
+  box-shadow: 0px 7px 0px #362955;
+}
+
+.landing-button:focus {
+  transition-duration: 0.3s;
+  box-shadow: 0px 3px 0px #362955;
+  transform: translateY(2px);
 }

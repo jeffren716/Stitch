@@ -12,7 +12,9 @@ const App = () => (
     <header>
       <NavbarContainer />
     </header>
-    <ProtectedRoute component={ SidebarContainer } />
+    <sidebar>
+      <ProtectedRoute component={ SidebarContainer } />
+    </sidebar>
     <Switch>
       <Route path='/directory' component={ ChannelIndexContainer } />
       <Route path='/' component={ LandingContainer }/>
