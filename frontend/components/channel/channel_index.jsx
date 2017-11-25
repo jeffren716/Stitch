@@ -9,8 +9,8 @@ class ChannelIndex extends React.Component {
       <div className='user-stream'>
         <iframe
           src='http://player.twitch.tv/?video=187283482&time=03m46s'
-          height='720'
-          width='1280'
+          height='400'
+          width='712'
           frameBorder='0'
           scrolling='no'
           allowFullScreen='true'

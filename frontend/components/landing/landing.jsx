@@ -9,7 +9,7 @@ const Landing = () => (
       <img src="https://imgur.com/FNwqakc.png" />
       <br/>
       <p>
-        Placeholder content about website that goes underneath the logo
+        Placeholder content about website
       </p>
       <Link to='/directory'>
         <button className='landing-button'>Explore!</button>

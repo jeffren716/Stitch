@@ -1,8 +1,8 @@
 .user-stream {
   display: block;
-  height: 100%;
-  left: 25%;
+  max-height: 720px;
+  left: 10%;
   position: absolute;
-  top: 25%;
-  width: 100%;
+  top: 10%;
+  max-width: 1280px;
 }
