@@ -15,9 +15,9 @@ const App = () => (
         Please log in to see followed users!
       </div>
     </header>
-    <sidebar>
+    <div>
       <ProtectedRoute component={ SidebarContainer } />
-    </sidebar>
+    </div>
     <Switch>
       <Route path='/directory' component={ ChannelIndexContainer } />
       <Route path='/' component={ LandingContainer }/>

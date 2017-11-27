@@ -6,6 +6,8 @@ import Root from './components/root';
 //Testing imports
 import * as SessionAPIUtil from './util/session_api_util';
 import { signup, login, logout } from './actions/session_actions';
+import * as ChannelAPIUtil from './util/channel_api_util';
+import { fetchChannels, fetchChannel } from './actions/channel_actions';
 //End of test imports
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signup = signup;
   window.login = login;
   window.logout = logout;
+  window.fetchChannels = fetchChannels;
+  window.fetchChannel = fetchChannel;
   //End of test window
   ReactDOM.render(<Root store={ store } />, root);
 });
