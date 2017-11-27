@@ -14,8 +14,7 @@ class User extends React.Component {
           width='712'
           frameBorder='0'
           scrolling='no'
-          allowFullScreen='true'
-          time='03m46s'>
+          allowFullScreen='true'>
         </iframe>
       </div>
     );

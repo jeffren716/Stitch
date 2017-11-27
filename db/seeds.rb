@@ -9,12 +9,6 @@
 User.destroy_all
 Channel.destroy_all
 
-user_array = [
-  {username: 'demo_user', password: 'password'},
-  {username: 'twitch', password: 'qpwirhgpaoskdn'},
-  {username: 'BobRoss', password: 'asldkfhapsoid', channel_id: 2, stream_title: 'Happy Little Accidents', stream_url: 'http://player.twitch.tv/?video=187283482&time=03m46s'}
-]
-
 channel_array = [
   {name: 'League of Legends', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-285x380.jpg'},
   {name: 'Creative', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/Creative-285x380.jpg'},
@@ -37,10 +31,12 @@ channel_array = [
   {name: 'The Legend of Zelda: Ocarina of Time', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time-285x380.jpg'},
 ]
 
-channel_array.each do |channel|
-  Channel.create!(channel)
-end
+user_array = [
+  {username: 'demo_user', password: 'password'},
+  {username: 'LoLUnofficial', password: 'qpwirhgpaoskdn', channel_id: 1, stream_title: '2017 Worlds Stage', stream_url: 'http://player.twitch.tv/?video=187649386&time=01h09m15s'},
+  {username: 'BobRoss', password: 'asldkfhapsoid', channel_id: 2, stream_title: 'Happy Little Accidents', stream_url: 'http://player.twitch.tv/?video=187283482&time=03m46s'}
+]
 
-user_array.each do |user|
-  User.create!(user)
-end
+Channel.create!(channel_array)
+
+User.create!(user_array)
