@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :password_digest, null: false
       t.string :session_token, null: false
       t.integer :channel_id
+      t.string :stream_url
 
       t.timestamps
     end

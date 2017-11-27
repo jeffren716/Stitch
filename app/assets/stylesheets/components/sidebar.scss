@@ -1,6 +1,6 @@
 .sidebar {
   background-color: #322f37;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: row;
   width: 15%;
@@ -14,7 +14,7 @@
 
 .placeholder-sidebar {
   background-color: #322f37;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: row;
   width: 15%;
@@ -24,4 +24,6 @@
   margin: 0;
   z-index: -1;
   color: white;
+  align-items: center;
+  justify-content: center;
 }

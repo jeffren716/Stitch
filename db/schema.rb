@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20171122001957) do
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.integer "channel_id"
+    t.string "stream_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "profile_picture", default: "https://thenib.imgix.net/usq/1d97429f-4a64-4d52-bfdb-c36172c05228/this-is-not-fine-001-dae9d5.png", null: false

@@ -8,7 +8,14 @@ class ChannelIndexItem extends React.Component {
 
   render() {
     return(
-      <li>{}</li>
+      <li className='channel-index-item'>
+        <div className='channel-index-item-image'>
+          <img src={this.props.channel.pic_url}></img>
+        </div>
+        <div className='channel-index-item-name'>
+          <h1>{this.props.channel.name}</h1>
+        </div>
+      </li>
     );
   }
 }

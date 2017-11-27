@@ -12,7 +12,7 @@ const App = () => (
     <header>
       <NavbarContainer />
       <div className='placeholder-sidebar'>
-        Please log in to see followed users!
+        <h1>Please log in to see followed users!</h1>
       </div>
     </header>
     <div>
