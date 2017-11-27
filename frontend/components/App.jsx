@@ -11,6 +11,9 @@ const App = () => (
   <div className="page">
     <header>
       <NavbarContainer />
+      <div className='placeholder-sidebar'>
+        Please log in to see followed users!
+      </div>
     </header>
     <sidebar>
       <ProtectedRoute component={ SidebarContainer } />

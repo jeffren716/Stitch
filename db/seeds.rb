@@ -7,7 +7,32 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Channel.destroy_all
 
-User.create!(
-  {username: 'demo_user', password: 'password'}
-)
+user_array = [
+  {username: 'demo_user', password: 'password'},
+  {username: 'twitch', password: 'qpwirhgpaoskdn'},
+  {username: 'BobRoss', password: 'asldkfhapsoid'}
+]
+
+channel_array = [
+  {name: 'League of Legends'},
+  {name: 'Art'},
+  {name: 'Overwatch'},
+  {name: 'PlayerUnknowns Battlegrounds'},
+  {name: 'Hearthstone'},
+  {name: 'Dota 2'},
+  {name: 'Music'},
+  {name: 'Counter-Strike: Global Offensive'},
+  {name: 'World of Warcraft'},
+  {name: 'Minecraft'},
+  {name: 'Path of Exile'},
+]
+
+user_array.each do |user|
+  User.create!(user)
+end
+
+channel_array.each do |channel|
+  Channel.create!(channel)
+end

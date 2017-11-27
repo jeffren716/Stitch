@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20171122001957) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pic_url", default: "https://thenib.imgix.net/usq/1d97429f-4a64-4d52-bfdb-c36172c05228/this-is-not-fine-001-dae9d5.png", null: false
     t.index ["name"], name: "index_channels_on_name", unique: true
   end
 
@@ -43,9 +44,11 @@ ActiveRecord::Schema.define(version: 20171122001957) do
     t.string "stream_title"
     t.string "password_digest", null: false
     t.string "session_token", null: false
+    t.integer "channel_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "profile_picture", default: "https://thenib.imgix.net/usq/1d97429f-4a64-4d52-bfdb-c36172c05228/this-is-not-fine-001-dae9d5.png", null: false
+    t.index ["channel_id"], name: "index_users_on_channel_id"
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end

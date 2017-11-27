@@ -1,6 +1,7 @@
 class Api::ChannelsController < ApplicationController
 
   def index
-    render json: ['hello']
+    @channels = Channel.all
+    render json: @channels
   end
 end
