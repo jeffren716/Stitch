@@ -23,6 +23,7 @@ class ChannelIndex extends React.Component {
           {
             this.props.channels.map((channel) => {
               return (<ChannelIndexItem
+                key={channel.id}
                 channel={channel}
               />);
             })

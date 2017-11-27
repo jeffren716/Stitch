@@ -34,9 +34,14 @@ class Navbar extends React.Component {
   sessionLinks() {
     return(
       <div className="navbar">
-        <Link to="/">
-          <img src="https://imgur.com/FNwqakc.png" />
-        </Link>
+        <div className='navbar-left'>
+          <Link to="/">
+            <img src="https://imgur.com/FNwqakc.png" />
+          </Link>
+          <div className='navbar-left-browse'>
+            <Link to='/directory'>Browse</Link>
+          </div>
+        </div>
         <div className="navbar-auth">
           <button onClick={this.toggleLogin} className="navbar-button">Log in</button>
           <button onClick={this.toggleSignup} className="navbar-button">Sign up</button>
@@ -50,9 +55,12 @@ class Navbar extends React.Component {
   welcome(currentUser, logout) {
     return(
       <div className="navbar">
-        <Link to="/">
-          <img src="https://imgur.com/FNwqakc.png" />
-        </Link>
+        <div className='navbar-left'>
+          <Link to="/">
+            <img src="https://imgur.com/FNwqakc.png" />
+          </Link>
+          <Link to='/directory'>Browse</Link>
+        </div>
         <div className="navbar-auth">
           <h2 className="navbar-greeting">Welcome, {currentUser.username}</h2>
           <button className="navbar-button" onClick={logout}>Log out</button>

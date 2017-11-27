@@ -6,6 +6,10 @@ class ChannelIndexItem extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    document.title = 'Stitch - Games';
+  }
+
   render() {
     return(
       <li className='channel-index-item'>

@@ -14,7 +14,7 @@
 }
 
 .navbar-auth {
-  display: inline-flex;
+  display: flex;
   color: $gray;
   align-items: center;
   padding-right: 7px;
@@ -40,4 +40,16 @@
 
 .navbar-button:active {
   background-color: #362955;
+}
+
+.navbar-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  color: white;
+}
+
+.navbar-left-browse:hover {
+  text-decoration: underline;
 }
