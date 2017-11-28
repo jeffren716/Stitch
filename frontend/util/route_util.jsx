@@ -7,7 +7,9 @@ const Protected = ({component: Component, path, loggedIn}) => (
     loggedIn ? (
       <Component {...props} />
     ) : (
-      <p></p>
+      <div className='placeholder-sidebar'>
+        <h1>Please log in to see followed users!</h1>
+      </div>
     )
   )}/>
 );

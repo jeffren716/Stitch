@@ -5,8 +5,6 @@ import { fetchChannel } from '../../actions/channel_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
-  console.log(ownProps);
   return({
     users: Object.values(state.entities.users),
     channel: state.entities.channels[ownProps.match.params.id]

@@ -2,24 +2,13 @@ import React from 'react';
 import{ Link, withRouter } from 'react-router-dom';
 
 class User extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: this.props.user
-    };
-  }
 
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(newProps) {
-
-  }
-
   render() {
-    console.log(this.props);
-    let { user } = this.props;
+    let user = this.props.user;
     if (!user) {
       return(<div>Ya bois wicked smaht</div>);
     } else {
