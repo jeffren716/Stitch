@@ -4,6 +4,7 @@ import NavbarContainer from './navbar/navbar_container';
 import SidebarContainer from './sidebar/sidebar_container';
 import LandingContainer from './landing/landing_container';
 import ChannelIndexContainer from './channel/channel_index_container';
+import GameIndexContainer from './game/game_index_container';
 // import ChannelIndexContainer from './channel/channel_container';
 import { ProtectedRoute } from '../util/route_util';
 
@@ -21,6 +22,7 @@ const App = () => (
     <Switch>
       <Route exact path='/directory' component={ ChannelIndexContainer } />
       <Route exact path='/' component={ LandingContainer }/>
+      <Route path='/game/:id' component={ GameIndexContainer }/>
     </Switch>
   </div>
 );

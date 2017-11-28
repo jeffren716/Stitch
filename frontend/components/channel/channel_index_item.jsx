@@ -13,7 +13,7 @@ class ChannelIndexItem extends React.Component {
   render() {
     return(
       <li className='channel-index-item'>
-        <Link to={`/game/${this.props.channel.name}`}>
+        <Link to={`/game/${this.props.channel.id}`}>
           <div className='channel-index-item-image'>
             <img src={this.props.channel.pic_url}></img>
           </div>

@@ -6,13 +6,11 @@ class ChannelIndex extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      channels: this.props.channels
-    };
+
   }
 
   componentDidMount() {
-    this.setState({channels: this.props.fetchChannels()});
+    this.props.fetchChannels();
   }
 
 

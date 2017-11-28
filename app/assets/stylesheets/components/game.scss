@@ -1,0 +1,24 @@
+.game-index ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15%;
+}
+
+.game-index-item {
+  margin: 10px;
+  margin-top: 5%;
+  width: 15%;
+}
+
+.game-index-item:hover {
+  color: $light-purple;
+  cursor: pointer;
+}
+
+.game-index-item-image {
+
+}
+
+.game-index-item-name {
+
+}
