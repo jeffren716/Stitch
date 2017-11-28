@@ -7,4 +7,9 @@ class Channel < ApplicationRecord
   class_name: :User,
   validate: false
 
+  def self.top_five_results(query_params)
+    param = '%' + query_params.downcase + '%'
+    Channel.where('lower(name) LIKE ?', param).limit(5)
+  end
+
 end

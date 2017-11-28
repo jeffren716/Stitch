@@ -19,6 +19,11 @@ class User < ApplicationRecord
     @user.valid_password?(password) ? @user : nil
   end
 
+  def self.top_five_results(query_params)
+    param = '%' + query_params.downcase + '%'
+    User.where('lower(username) LIKE ?', param).limit(5)
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
