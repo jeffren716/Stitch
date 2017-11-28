@@ -7,15 +7,10 @@ class GameIndexItem extends React.Component {
 
   }
 
-  componentWillReceiveProps(newProps) {
-
-  }
-
   render() {
-    console.log(this.props.user);
     return(
       <li className='game-index-item'>
-        <Link to={`/${this.props.user.username}`}>
+        <Link to={`/${this.props.user.id}`}>
           <div className='game-index-item-image'>
             <img src={this.props.user.profile_picture}></img>
           </div>
