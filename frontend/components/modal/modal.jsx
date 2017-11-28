@@ -47,7 +47,7 @@ class Modal extends React.Component {
 
   demo(e) {
     e.preventDefault();
-    let demo_user = ({username: 'demo_user', password: 'password'});
+    let demo_user = ({username: 'guest', password: 'password'});
     this.props.login(demo_user);
     this.closeModal();
   }

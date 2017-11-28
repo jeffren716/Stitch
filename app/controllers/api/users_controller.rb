@@ -10,12 +10,8 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  def index
-    @users = User.find_by(params[:channel_id])
-  end
-
   def show
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:userId])
   end
 
   private

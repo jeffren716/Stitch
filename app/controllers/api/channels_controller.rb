@@ -5,6 +5,7 @@ class Api::ChannelsController < ApplicationController
   end
 
   def show
-    @channel = Channel.find_by(params[:id])
+    @channel = Channel.find_by(id: params[:id])
+    @users = @channel.users
   end
 end
