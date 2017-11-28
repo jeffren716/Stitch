@@ -19,8 +19,8 @@ const App = () => (
       <ProtectedRoute component={ SidebarContainer } />
     </div>
     <Switch>
-      <Route path='/directory' component={ ChannelIndexContainer } />
-      <Route path='/' component={ LandingContainer }/>
+      <Route exact path='/directory' component={ ChannelIndexContainer } />
+      <Route exact path='/' component={ LandingContainer }/>
     </Switch>
   </div>
 );
