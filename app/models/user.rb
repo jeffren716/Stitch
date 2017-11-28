@@ -5,11 +5,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  # belongs_to :channel,
-  # primary_key: :id,
-  # foreign_key: :channel_id,
-  # class_name: :Channel,
-  # validate: false
+  belongs_to :channel,
+  primary_key: :id,
+  foreign_key: :channel_id,
+  class_name: :Channel,
+  validate: false
 
   attr_reader :password
 
