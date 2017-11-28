@@ -9,11 +9,16 @@ class User extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.fetchUser(this.props.match.params.id);
+  }
+
   componentWillReceiveProps(newProps) {
-    this.setState({user: newProps.user})
+
   }
 
   render() {
+    console.log(this.props);
     let { user } = this.props;
     if (!user) {
       return(<div>Ya bois wicked smaht</div>);

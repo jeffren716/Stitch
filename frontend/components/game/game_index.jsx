@@ -6,13 +6,19 @@ class GameIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: this.props.users
+      users: this.props.users,
+      channel: this.props.channel
     };
   }
 
-
   componentDidMount() {
-    this.props.fetchChannel(this.props.match.params.id)
+    this.props.fetchChannel(this.props.match.params.id);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props === newProps) {
+      this.setState({users: this.props.fetchChannel(newProps.match.params.id)});
+    }
   }
 
   render() {
