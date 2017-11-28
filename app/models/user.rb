@@ -8,7 +8,8 @@ class User < ApplicationRecord
   belongs_to :channel,
   primary_key: :id,
   foreign_key: :channel_id,
-  class_name: :Channel
+  class_name: :Channel,
+  validate: false
 
   attr_reader :password
 

@@ -30,11 +30,13 @@ ssb4 = Channel.create!(name: 'Super Smash Bros. for Wii U', pic_url: 'https://st
 ssbm = Channel.create!(name: 'Super Smash Bros. Melee', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/Super%20Smash%20Bros.%20Melee-285x380.jpg')
 oot = Channel.create!(name: 'The Legend of Zelda: Ocarina of Time', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time-285x380.jpg')
 
-demo = User.create!(username: 'guest', password: 'password', channel_id: creative.id, stream_title: 'Good job finding this!', stream_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ')
-
-user_array = [
-  {username: 'LoLUnofficial', password: 'qpwirhgpaoskdn', channel_id: lol.id, stream_title: '2017 Worlds Stage', stream_url: 'http://player.twitch.tv/?video=187649386&time=01h09m15s'},
-  {username: 'BobRoss', password: 'asldkfhapsoid', channel_id: creative.id, stream_title: 'Happy Little Accidents', stream_url: 'http://player.twitch.tv/?video=187283482&time=03m46s'}
-]
-
-User.create!(user_array)
+demo = User.create!(username: 'guest', password: 'password', stream_title: 'Good job finding this!', stream_url: '')
+art1 = User.create!(username: 'RobBoss', password: 'ksdvnb;asd', channel_id: creative.id, stream_title: 'Happy Little Accidents', stream_url: 'http://player.twitch.tv/?video=187283482&time=03m46s')
+art2 = User.create!(username: 'Foodie', password: 'paasdhw-hqp', channel_id: creative.id, stream_title: 'All cooking, all the time', stream_url: 'http://player.twitch.tv/?channel=food')
+lol1 = User.create!(username: 'LoLUnofficial', password: 'pqiuwrbgpas', channel_id: lol.id, stream_title: '2017 Worlds Stage', stream_url: 'http://player.twitch.tv/?video=187649386&time=01h09m15s')
+smo1 = User.create!(username: '720chrism', password: 'po2SYRtzfdac', channel_id: smo.id, stream_title: 'Super Mario Odyssey Speedrun!', stream_url: 'http://player.twitch.tv/?video=204862311&time=08m32s')
+ovw1 = User.create!(username: 'albatross', password: 'qoweurmc3098m4qcpiwj', channel_id: ow.id, stream_title: 'gametime', stream_url: 'http://player.twitch.tv/?video=182600540&time=14m52s')
+pub1 = User.create!(username: 'SurgeonRespect', password: 'qo43yxrmoiurhmc', channel_id: pubg.id, stream_title: 'Domination', stream_url: 'http://player.twitch.tv/?video=203488645&time=01h56m56s')
+hts1 = User.create!(username: 'Kibles', password: 'msldfhgioveuhc', channel_id: hs.id, stream_title: 'thanksgiving stream', stream_url: 'http://player.twitch.tv/?video=204812454&time=28m34s')
+dot1 = User.create!(username: 'BeforeTheSummit', password: 'ocmsdvgsjclk;', channel_id: dota.id, stream_title: 'SEA qualifiers - Fnatic vs Fire Dragoon', stream_url: 'http://player.twitch.tv/?video=204932299&time=38m32s')
+mus1 = User.create!(username: 'Monsterdog', password: 'asdjfasdlfkasjf', channel_id: music.id, stream_title: '24/7 EDM', stream_url: 'http://player.twitch.tv/?channel=monstercat')
