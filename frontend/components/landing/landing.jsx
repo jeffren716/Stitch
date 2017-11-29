@@ -8,11 +8,14 @@ const Landing = () => (
     <div className='landing-container'>
       <img src="https://imgur.com/FNwqakc.png" />
       <br/>
+      <h1>The best gameplay from your favorite streamers</h1>
       <p>
-        Placeholder content about website
+        Watch, follow, and stream all the content from all the things you know and love.
+        From nostalgic, childhood games to the freshest content hot off the press, everything
+        is at your leisure.  Follow your favorite streamers and chat along with other viewers.
       </p>
       <Link to='/directory'>
-        <button className='landing-button'>Explore!</button>
+        <button className='landing-button'>Explore</button>
       </Link>
     </div>
   </div>

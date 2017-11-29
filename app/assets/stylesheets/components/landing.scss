@@ -48,14 +48,14 @@
 }
 
 .landing-button {
-  font-size: 16px;
+  font-size: 24px;
   margin: 10px;
   background-color: $light-purple;
   color: white;
   font-family: 'Open Sans';
   border: 2px solid $purple;
   border-radius: 5px;
-  padding: 5px 7px;
+  padding: 14px 21px;
   box-shadow: 0px 5px 0px #362955;
   transition-duration: 0.3s;
 }
@@ -63,12 +63,19 @@
 .landing-button:hover {
   transition-duration: 0.3s;
   background-color: $lightest-purple;
-  transform: translateY(-2px);
-  box-shadow: 0px 7px 0px #362955;
+  transform: translateY(-4px);
+  box-shadow: 0px 9px 0px #362955;
 }
 
 .landing-button:focus {
   transition-duration: 0.3s;
   box-shadow: 0px 3px 0px #362955;
   transform: translateY(2px);
+}
+
+.landing-container p {
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
