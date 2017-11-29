@@ -30,7 +30,7 @@ ssb4 = Channel.create!(name: 'Super Smash Bros. for Wii U', pic_url: 'https://st
 ssbm = Channel.create!(name: 'Super Smash Bros. Melee', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/Super%20Smash%20Bros.%20Melee-285x380.jpg')
 oot = Channel.create!(name: 'The Legend of Zelda: Ocarina of Time', pic_url: 'https://static-cdn.jtvnw.net/ttv-boxart/The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time-285x380.jpg')
 
-demo = User.create!(username: 'guest', password: 'password', stream_title: 'Good job finding this!', stream_url: '')
+demo = User.create!(username: 'music', channel_id: creative.id, password: 'password', stream_title: 'Good job finding this!', stream_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ')
 lol1 = User.create!(username: 'LoLUnofficial', password: 'pqiuwrbgpas', channel_id: lol.id, stream_title: '2017 Worlds Stage', stream_url: 'http://player.twitch.tv/?video=187649386&time=01h09m15s')
 lol2 = User.create!(username: 'lidlid', password: 'osduaczhfj', channel_id: lol.id, stream_title: 'side account', stream_url: 'http://player.twitch.tv/?video=204800797&time=10m45s')
 lol3 = User.create!(username: 'dayrus', password: 'pqiuwrbgpas', channel_id: lol.id, stream_title: 'solo queue', stream_url: 'http://player.twitch.tv/?video=204860635&time=01h52m50s')

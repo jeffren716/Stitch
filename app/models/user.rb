@@ -8,9 +8,8 @@ class User < ApplicationRecord
   belongs_to :channel,
   primary_key: :id,
   foreign_key: :channel_id,
-  class_name: :Channel,
-  validate: false
-
+  class_name: :Channel
+  
   attr_reader :password
 
   def self.find_by_credentials(username, password)

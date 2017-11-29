@@ -20,6 +20,7 @@ class User extends React.Component {
             width='712'
             frameBorder='0'
             scrolling='no'
+            autoplay='0'
             allowFullScreen='true'>
           </iframe>
           <div className='user-info'>

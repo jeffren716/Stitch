@@ -4,8 +4,7 @@ class Channel < ApplicationRecord
   has_many :users,
   primary_key: :id,
   foreign_key: :channel_id,
-  class_name: :User,
-  validate: false
+  class_name: :User
 
   def self.top_five_results(query_params)
     param = '%' + query_params.downcase + '%'
