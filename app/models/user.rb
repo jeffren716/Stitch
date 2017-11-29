@@ -9,7 +9,21 @@ class User < ApplicationRecord
   primary_key: :id,
   foreign_key: :channel_id,
   class_name: :Channel
-  
+
+  has_many :follows,
+  primary_key: :id,
+  foreign_key: :follower_id,
+  class_name: :Follow
+
+  has_many :followers,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Follow
+
+  has_many :followed_users,
+  through: :follows,
+  source: :followee
+
   attr_reader :password
 
   def self.find_by_credentials(username, password)
