@@ -1,13 +1,17 @@
-@channels.each do |channel|
-  json.set! channel.id do
-    json.set! :type, 'channel'
-    json.partial! 'api/channels/channel', channel: channel, users: channel.users
+json.channelSearchResults do
+  @channels.each do |channel|
+      json.partial! 'api/channels/channel', channel: channel, users: {}
+
   end
 end
 
-@users.each do |user|
-  json.set! user.id do
-    json.set! :type, 'user'
-    json.partial! 'api/users/user', user: user
+
+json.userSearchResults do
+  @users.each do |user|
+    json.set! user.id do
+      json.partial! 'api/users/user', user: user
+
+    end
   end
+
 end

@@ -5,9 +5,7 @@ json.channel do
   end
 end
 
-# json.set! users.id do
-#   json.extract! users, :id, :stream_title, :stream_url, :profile_picture
-# end
+
 json.users do
   users.each do |user|
     json.set! user.id do

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ModalContainer from '../modal/modal_container';
+import Search from '../search/search';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class Navbar extends React.Component {
           <div className='navbar-left-browse'>
             <Link to='/directory'>Browse</Link>
           </div>
+          <Search></Search>
         </div>
         <div className="navbar-auth">
           <button onClick={this.toggleLogin} className="navbar-button">Log in</button>
