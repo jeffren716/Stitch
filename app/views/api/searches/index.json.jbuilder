@@ -1,7 +1,7 @@
 @channels.each do |channel|
   json.set! channel.id do
     json.set! :type, 'channel'
-    json.partial! 'api/channels/channel', channel: channel
+    json.partial! 'api/channels/channel', channel: channel, users: channel.users
   end
 end
 
