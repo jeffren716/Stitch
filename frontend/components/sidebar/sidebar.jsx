@@ -7,7 +7,10 @@ class Sidebar extends React.Component {
   render() {
     return(
       <div className='sidebar'>
-        Placeholder
+        <div className='sidebar-title'>
+          <h1>Followed Users</h1>
+        </div>
+        <div className='sidebar-divider'></div>
       </div>
     );
   }
