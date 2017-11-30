@@ -1,8 +1,7 @@
-
 json.followedUsers do
-  @follows.each do |follow|
-    json.set! follow.user_id do
-      json.extract! follow, :id, :user_id, :follower_id
+  @user.followed_users.each do |followed_user|
+    json.set! followed_user.id do
+      json.extract! followed_user, :id, :username, :stream_title, :profile_picture
     end
   end
 end

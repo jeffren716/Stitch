@@ -8,6 +8,7 @@ class Api::FollowsController < ApplicationController
   end
 
   def index
+    @user = current_user
     @follows = Follow.all
   end
 
