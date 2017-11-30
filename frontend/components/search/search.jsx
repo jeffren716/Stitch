@@ -19,23 +19,6 @@ class Search extends React.Component {
     this.handleSelectChannel = this.handleSelectChannel.bind(this);
     this.handleSelectUser = this.handleSelectUser.bind(this);
     this.onBlur = this.onBlur.bind(this);
-    // this.handleCloseSearch = this.handleCloseSearch.bind(this);
-  }
-
-  // handleCloseSearch(event) {
-  //   event.preventDefault();
-  //   this.setState({query: ''});
-  // }
-
-  // https://stackoverflow.com/questions/36180414/reactjs-add-custom-event-listener-to-component
-  // componentDidMount() {
-  //   if (document.getElementById('searchbox-screen')) {
-  //     document.getElementById('searchbox-screen').addEventListener('click', this.handleCloseSearch);
-  //   }
-  // }
-
-  componentWillUnmount() {
-    // document.getElementById('searchbox-screen').removeEventListener('click', this.handleCloseSearch);
   }
 
   handleSearch(e) {
