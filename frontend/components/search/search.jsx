@@ -9,6 +9,7 @@ class Search extends React.Component {
     super(props);
     this.state = {
       query: '',
+      holder: '',
       results: {
         channels: null,
         users: null
@@ -19,6 +20,7 @@ class Search extends React.Component {
     this.handleSelectChannel = this.handleSelectChannel.bind(this);
     this.handleSelectUser = this.handleSelectUser.bind(this);
     this.onBlur = this.onBlur.bind(this);
+    this.onFocus = this.onFocus.bind(this);
   }
 
   handleSearch(e) {
@@ -68,7 +70,12 @@ class Search extends React.Component {
 
   // https://stackoverflow.com/questions/31247214/onfocus-and-onblur-does-not-render-in-react
   onBlur() {
+    this.setState({holder: this.state.query});
     this.setState({query: ''});
+  }
+
+  onFocus() {
+    this.setState({query: this.state.holder});
   }
 
   renderResults(channelResults, userResults) {
@@ -121,6 +128,7 @@ class Search extends React.Component {
             type='text'
             onChange={this.handleSearch}
             onBlur={this.onBlur}
+            onFocus={this.onFocus}
             value={this.state.query}
             placeholder='Search'
           />
