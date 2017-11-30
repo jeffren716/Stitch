@@ -18,4 +18,10 @@
 
 .user-info-header {
   display: block;
+  padding: 5px;
+}
+
+.user-info-username {
+  font-weight: 700;
+  border-bottom: 2px solid $purple;
 }

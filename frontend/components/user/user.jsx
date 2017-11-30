@@ -32,7 +32,7 @@ class User extends React.Component {
           <div className='user-info'>
             <img src={user.profile_picture}></img>
             <div className='user-info-header'>
-              <h1>{user.username}</h1>
+              <h1 className='user-info-username'>{user.username}</h1>
               <h2>{user.stream_title}</h2>
             </div>
           </div>
