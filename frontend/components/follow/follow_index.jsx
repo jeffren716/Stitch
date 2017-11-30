@@ -12,7 +12,8 @@ class FollowIndex extends React.Component {
   }
 
   render() {
-    if (this.props.follows !== {}) {
+    console.log(this.props.follows);
+    if (this.props.follows !== []) {
       return(
         <div className='follow-index'>
           <ul>
@@ -29,7 +30,7 @@ class FollowIndex extends React.Component {
           </ul>
         </div>
       );
-    } else {
+    } else if (this.props.follows === []) {
       return(
         <div>
           <p>It's a little lonely. Find some users to follow!</p>

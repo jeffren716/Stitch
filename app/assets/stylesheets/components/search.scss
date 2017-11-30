@@ -17,8 +17,12 @@
   color: black;
   width: 175%;
   max-height: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
   font-size: 16px;
+}
+
+.searchbox-results::-webkit-scrollbar {
+  width: 0 !important
 }
 
 .searchbox-results-channel {
