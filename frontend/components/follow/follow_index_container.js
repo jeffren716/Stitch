@@ -3,9 +3,9 @@ import FollowIndex from './follow_index';
 import { fetchFollows, deleteFollow } from '../../actions/follow_actions';
 
 const mapStateToProps = state => {
-
+  console.log(state);
   return({
-    follows: state.session.currentUser
+    follows: Object.values(state.entities.follows)
   });
 };
 

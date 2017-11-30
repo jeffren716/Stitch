@@ -16,6 +16,9 @@ class GameIndex extends React.Component {
     this.props.fetchChannel(this.props.match.params.id);
   }
 
+  componentWillMount() {
+  }
+
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.props.fetchChannel(newProps.match.params.id);

@@ -9,6 +9,7 @@ import { signup, login, logout } from './actions/session_actions';
 import * as ChannelAPIUtil from './util/channel_api_util';
 import { fetchChannels, fetchChannel } from './actions/channel_actions';
 import { fetchUser } from './actions/user_actions';
+import { fetchFollows, createFollow, deleteFollow } from './actions/follow_actions';
 //End of test imports
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchChannels = fetchChannels;
   window.fetchChannel = fetchChannel;
   window.fetchUser = fetchUser;
+  window.fetchFollows = fetchFollows;
+  window.createFollow = createFollow;
+  window.deleteFollow = deleteFollow;
   //End of test window
   ReactDOM.render(<Root store={ store } />, root);
 });
