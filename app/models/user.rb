@@ -24,6 +24,16 @@ class User < ApplicationRecord
   through: :follows,
   source: :followee
 
+  has_many :messages,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Message
+
+  has_many :ircs,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Irc
+  
   attr_reader :password
 
   def self.find_by_credentials(username, password)
