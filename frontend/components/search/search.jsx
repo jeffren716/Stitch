@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import * as SearchAPIUtil from '../../util/search_api_util';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -17,6 +18,21 @@ class Search extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSelectChannel = this.handleSelectChannel.bind(this);
     this.handleSelectUser = this.handleSelectUser.bind(this);
+    this.handleCloseSearch = this.handleCloseSearch.bind(this);
+  }
+
+  handleCloseSearch(event) {
+    event.preventDefault();
+    this.setState({query: ''});
+  }
+
+  // https://stackoverflow.com/questions/36180414/reactjs-add-custom-event-listener-to-component
+  componentDidMount() {
+    document.addEventListener('click', this.handleCloseSearch);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleCloseSearch);
   }
 
   handleSearch(e) {

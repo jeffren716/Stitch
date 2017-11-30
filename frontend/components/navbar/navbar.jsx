@@ -67,6 +67,7 @@ class Navbar extends React.Component {
           <Search></Search>
         </div>
         <div className="navbar-auth">
+          <img src={currentUser.profile_picture}></img>
           <h2 className="navbar-greeting">Welcome, {currentUser.username}</h2>
           <button className="navbar-button" onClick={logout}>Log out</button>
         </div>
