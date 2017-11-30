@@ -7,6 +7,12 @@ class User extends React.Component {
     this.props.fetchUser(this.props.match.params.id);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.match.params.id !== newProps.match.params.id) {
+      this.props.fetchUser(newProps.match.params.id);
+    }
+  }
+
   render() {
     let user = this.props.user;
     if (!user) {
@@ -16,8 +22,8 @@ class User extends React.Component {
         <div className='user-stream'>
           <iframe
             src={user.stream_url}
-            height='400'
-            width='712'
+            height='490'
+            width='872'
             frameBorder='0'
             scrolling='no'
             autoplay='0'

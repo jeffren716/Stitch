@@ -12,7 +12,8 @@ const Landing = () => (
       <p>
         Watch, follow, and stream all the content from all the things you know and love.
         From nostalgic, childhood games to the freshest content hot off the press, everything
-        is at your leisure.  Follow your favorite streamers and chat along with other viewers.
+        is at your fingertips.  Follow your favorite streamers and chat along with other viewers.
+        Start watching now!
       </p>
       <Link to='/directory'>
         <button className='landing-button'>Explore</button>

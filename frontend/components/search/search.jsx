@@ -15,6 +15,8 @@ class Search extends React.Component {
     };
 
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleSelectChannel = this.handleSelectChannel.bind(this);
+    this.handleSelectUser = this.handleSelectUser.bind(this);
   }
 
   handleSearch(e) {
@@ -44,6 +46,24 @@ class Search extends React.Component {
     });
   }
 
+  handleSelectChannel(channel) {
+    return(e) => {
+      e.preventDefault();
+      this.setState({query: ''}, () => {
+        this.props.history.push(`/game/${channel.id}`);
+      });
+    };
+  }
+
+  handleSelectUser(user) {
+    return(e) => {
+      e.preventDefault();
+      this.setState({query: ''}, () => {
+        this.props.history.push(`/${user.id}`);
+      });
+    };
+  }
+
   renderResults(channelResults, userResults) {
     if (this.state.query !== '') {
       return(
@@ -65,13 +85,11 @@ class Search extends React.Component {
     let userResults;
     if (channels !== null) {
       channelResults = channels.map(channel => (
-        <li>
-          <Link to={`/game/${channel.id}`} key={`${channel.name}-${channel.id}`}>
-            <div className='searchbox-results-channel'>
-              <img src={channel.pic_url}></img>
-              <h2>{channel.name}</h2>
-            </div>
-          </Link>
+        <li onClick={this.handleSelectChannel(channel)} key={`${channel.name}-${channel.id}`}>
+          <div className='searchbox-results-channel'>
+            <img src={channel.pic_url}></img>
+            <h2>{channel.name}</h2>
+          </div>
         </li>
       ));
     } else {
@@ -79,13 +97,11 @@ class Search extends React.Component {
     }
     if (users !== null) {
       userResults = users.map(user => (
-        <li>
-          <Link to={`/${user.id}`} key={`${user.name}-${user.id}`}>
-            <div className='searchbox-results-user'>
-              <img src={user.profile_picture}></img>
-              <h2>{user.username}</h2>
-            </div>
-          </Link>
+        <li onClick={this.handleSelectUser(user)} key={`${user.name}-${user.id}`}>
+          <div className='searchbox-results-user'>
+            <img src={user.profile_picture}></img>
+            <h2>{user.username}</h2>
+          </div>
         </li>
       ));
     } else {

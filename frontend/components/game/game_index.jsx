@@ -9,6 +9,7 @@ class GameIndex extends React.Component {
       users: this.props.users,
       channel: this.props.channel
     };
+
   }
 
   componentDidMount() {
@@ -16,8 +17,8 @@ class GameIndex extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.props === newProps) {
-      this.setState({users: this.props.fetchChannel(newProps.match.params.id)});
+    if (this.props.match.params.id !== newProps.match.params.id) {
+      this.props.fetchChannel(newProps.match.params.id);
     }
   }
 

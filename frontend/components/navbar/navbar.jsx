@@ -61,7 +61,10 @@ class Navbar extends React.Component {
           <Link to="/">
             <img src="https://imgur.com/FNwqakc.png" />
           </Link>
-          <Link to='/directory'>Browse</Link>
+          <div className='navbar-left-browse'>
+            <Link to='/directory'>Browse</Link>
+          </div>
+          <Search></Search>
         </div>
         <div className="navbar-auth">
           <h2 className="navbar-greeting">Welcome, {currentUser.username}</h2>
