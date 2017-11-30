@@ -74,7 +74,7 @@ h3 {
 
 .login-form input, #login-form-button {
   margin: 10px;
-  border: 2px solid $purple;
+  border: 1px solid $purple;
   font-family: 'Open Sans';
   border-radius: 5px;
   transition-duration: 0.5s;
@@ -82,13 +82,15 @@ h3 {
 }
 
 .login-form input:focus {
-  border: 2px solid $gray;
+  border: 1px solid $gray;
   transition-duration: 0.5s;
+  box-shadow: 0px 0px 10px $purple;
 }
 
 .login-form input:hover {
-  border: 2px solid $gray;
+  border: 1px solid $gray;
   transition-duration: 0.5s;
+  box-shadow: 0px 0px 10px $purple;
 }
 
 #login-form-button {
@@ -102,8 +104,10 @@ h3 {
 #login-form-button:hover {
   transition-duration: 0.5s;
   background-color: $lightest-purple;
+  box-shadow: 0px 0px 10px $purple;
 }
 
 #login-form-button:active {
   background-color: #362955;
+  box-shadow: 0px 0px 10px $purple;
 }
