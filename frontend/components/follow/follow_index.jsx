@@ -12,22 +12,30 @@ class FollowIndex extends React.Component {
   }
 
   render() {
-    return(
-      <div className='follow-index'>
-        <ul>
-          {
-            this.props.follows.map((follow) => {
-              return (
-                <FollowIndexItem
-                  key={follow.id}
-                  follow={follow}
-                />
-              );
-            })
-          }
-        </ul>
-      </div>
-    );
+    if (this.props.follows !== {}) {
+      return(
+        <div className='follow-index'>
+          <ul>
+            {
+              this.props.follows.map((follow) => {
+                return (
+                  <FollowIndexItem
+                    key={follow.id}
+                    follow={follow}
+                  />
+                );
+              })
+            }
+          </ul>
+        </div>
+      );
+    } else {
+      return(
+        <div>
+          <p>It's a little lonely. Find some users to follow!</p>
+        </div>
+      );
+    }
   }
 }
 

@@ -7,10 +7,6 @@ class User extends React.Component {
     this.props.fetchUser(this.props.match.params.id);
   }
 
-  componentWillMount() {
-    document.title = `Stitch - ${this.props.user.username}`;
-  }
-
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.props.fetchUser(newProps.match.params.id);
