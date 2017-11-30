@@ -21,6 +21,7 @@ class Search extends React.Component {
     this.handleSelectUser = this.handleSelectUser.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.onFocus = this.onFocus.bind(this);
+    this.placeholder = this.placeholder.bind(this);
   }
 
   handleSearch(e) {
@@ -78,6 +79,14 @@ class Search extends React.Component {
     this.setState({query: this.state.holder});
   }
 
+  placeholder() {
+    if (this.state.holder === '') {
+      return('Search');
+    } else {
+      return(this.state.holder);
+    }
+  }
+
   renderResults(channelResults, userResults) {
     if (this.state.query !== '') {
       return(
@@ -130,7 +139,7 @@ class Search extends React.Component {
             onBlur={this.onBlur}
             onFocus={this.onFocus}
             value={this.state.query}
-            placeholder='Search'
+            placeholder={this.placeholder()}
           />
         </div>
         {this.renderResults(channelResults, userResults)}
