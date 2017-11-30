@@ -18,21 +18,24 @@ class Search extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSelectChannel = this.handleSelectChannel.bind(this);
     this.handleSelectUser = this.handleSelectUser.bind(this);
-    this.handleCloseSearch = this.handleCloseSearch.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+    // this.handleCloseSearch = this.handleCloseSearch.bind(this);
   }
 
-  handleCloseSearch(event) {
-    event.preventDefault();
-    this.setState({query: ''});
-  }
+  // handleCloseSearch(event) {
+  //   event.preventDefault();
+  //   this.setState({query: ''});
+  // }
 
   // https://stackoverflow.com/questions/36180414/reactjs-add-custom-event-listener-to-component
-  componentDidMount() {
-    document.addEventListener('click', this.handleCloseSearch);
-  }
+  // componentDidMount() {
+  //   if (document.getElementById('searchbox-screen')) {
+  //     document.getElementById('searchbox-screen').addEventListener('click', this.handleCloseSearch);
+  //   }
+  // }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleCloseSearch);
+    // document.getElementById('searchbox-screen').removeEventListener('click', this.handleCloseSearch);
   }
 
   handleSearch(e) {
@@ -78,6 +81,11 @@ class Search extends React.Component {
         this.props.history.push(`/${user.id}`);
       });
     };
+  }
+
+  // https://stackoverflow.com/questions/31247214/onfocus-and-onblur-does-not-render-in-react
+  onBlur() {
+    this.setState({query: ''});
   }
 
   renderResults(channelResults, userResults) {
@@ -129,6 +137,7 @@ class Search extends React.Component {
           <input
             type='text'
             onChange={this.handleSearch}
+            onBlur={this.onBlur}
             value={this.state.query}
             placeholder='Search'
           />
