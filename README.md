@@ -110,11 +110,11 @@ source: :followee
 
 ```
 
-<!-- Naming your associations in an understandable scope as to see who is the follower
+Naming your associations in an understandable scope as to see who is the follower
 and who is the followee as well as which follow belongs to which user.  Add through
 associations into the mix and eventually results in...
 
-![help](https://imgur.com/O67J4o0.gif 'help') -->
+![help](https://imgur.com/O67J4o0.gif 'help')
 
 Once follows becomes part of the state, implementation is much easier.  Since users
 can switch between channels under which they want to stream, my state must be constantly
