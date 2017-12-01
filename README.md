@@ -123,7 +123,7 @@ state or else they will be thrown out when I update my channels slice of state.
 Therefore, I made a specific follows slice of state tied to the current user that
 returns user objects that we need handled from the back end.  
 
-![follows](https://imgur.com/Gg8le2L)
+![follows](https://imgur.com/Gg8le2L.gif 'dynamic follows')
 
 ## Future aspirations
 
