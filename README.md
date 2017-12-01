@@ -116,4 +116,18 @@ associations into the mix and eventually results in...
 
 ![help](https://imgur.com/O67J4o0.gif 'help')
 
-Once follows becomes part of the state, implementation is much easier
+Once follows becomes part of the state, implementation is much easier.  Since users
+can switch between channels under which they want to stream, my state must be constantly
+updating.  This means I cannot store my followed users under the users slice of
+state or else they will be thrown out when I update my channels slice of state.
+Therefore, I made a specific follows slice of state tied to the current user that
+returns user objects that we need handled from the back end.  
+
+![follows](https://imgur.com/Gg8le2L)
+
+## Future aspirations
+
+- [ ] Add live chat
+- [ ] Be able to follow channels as well
+- [ ] Support user changing their profile picture and channel
+- [ ] Add video manipulation
