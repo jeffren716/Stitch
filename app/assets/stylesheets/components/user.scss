@@ -57,9 +57,14 @@
   right: 90px;
   bottom: 24px;
   padding: 8px 14px;
+  cursor: default;
 }
 
 .user-info-follow-warning:hover .user-info-follow-tooltip {
   opacity: 1;
   transition-duration: 0.3s;
+}
+
+.user-info-follow-tooltip:hover {
+  visibility: hidden;
 }
