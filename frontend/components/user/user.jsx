@@ -22,7 +22,7 @@ class User extends React.Component {
 
   handleFollowToggle() {
     let { followsId, user, makeFollow, deleteFollow, currentUser } = this.props;
-    if (followsId.includes(user.id)) {
+    if (followsId.includes(user.id.toString())) {
       return(
         <button onClick={() => deleteFollow(user.id)}>Unfollow</button>
       );

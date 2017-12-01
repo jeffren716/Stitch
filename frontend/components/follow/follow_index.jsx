@@ -5,18 +5,31 @@ import FollowIndexItem from './follow_index_item';
 class FollowIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleEmpty = this.handleEmpty.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchFollows();
   }
 
+  handleEmpty() {
+    if (this.props.follows.length < 1) {
+      return(
+        <div className='follow-index-empty'>
+          It's a little lonely. Find some users to follow!
+        </div>
+      );
+    }
+  }
+
   render() {
     let { deleteFollow } = this.props;
-    if (this.props.follows !== []) {
+    if (this.props.follows) {
       return(
         <div className='follow-index'>
           <ul>
+            {this.handleEmpty()}
             {
               this.props.follows.map((follow) => {
                 return (
@@ -31,12 +44,8 @@ class FollowIndex extends React.Component {
           </ul>
         </div>
       );
-    } else if (this.props.follows === []) {
-      return(
-        <div>
-          <p>It's a little lonely. Find some users to follow!</p>
-        </div>
-      );
+    } else {
+      return null;
     }
   }
 }
