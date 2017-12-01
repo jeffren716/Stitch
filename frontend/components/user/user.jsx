@@ -24,11 +24,11 @@ class User extends React.Component {
     let { followsId, user, makeFollow, deleteFollow, currentUser } = this.props;
     if (followsId.includes(user.id)) {
       return(
-        <button onClick={deleteFollow(user.id)}>Unfollow</button>
+        <button onClick={() => deleteFollow(user.id)}>Unfollow</button>
       );
     } else {
       return(
-        <button onClick={makeFollow({user_id: user.id, follower_id: currentUser.id})}>Follow</button>
+        <button onClick={() => makeFollow({user_id: user.id, follower_id: currentUser.id})}>Follow</button>
       );
     }
   }
@@ -36,7 +36,7 @@ class User extends React.Component {
   handleFollow() {
     if (this.props.loggedIn) {
       return(
-        <div className='user-info-follow-button'>{this.handleFollowToggle}</div>
+        <div className='user-info-follow-button'>{this.handleFollowToggle()}</div>
       );
     } else {
       return(
@@ -68,7 +68,7 @@ class User extends React.Component {
               <h2>{user.stream_title}</h2>
             </div>
             {
-              this.handleFollow
+              this.handleFollow()
             }
           </div>
         </div>

@@ -18,8 +18,7 @@ class FollowIndexItem extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-    let { follow, deleteFollow } = this.props;
+    let { follow } = this.props;
     return(
       <div className='follow-index-item-div'>
         <li className='follow-index-item' onClick={this.handleClick}>
