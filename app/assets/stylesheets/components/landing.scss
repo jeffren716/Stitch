@@ -19,11 +19,16 @@
   -webkit-animation-fill-mode: forwards;
   animation: backgroundScroll 15s linear infinite;
   animation-fill-mode: forwards;
-  z-index: -1;
 }
 
 .landing {
   justify-content: center;
+  position: fixed;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
 }
 
 .landing-container {

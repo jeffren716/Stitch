@@ -108,7 +108,7 @@ class Search extends React.Component {
     let userResults;
     if (channels !== null) {
       channelResults = channels.map(channel => (
-        <li onClick={this.handleSelectChannel(channel)} key={`${channel.name}-${channel.id}`}>
+        <li onMouseDown={this.handleSelectChannel(channel)} key={`${channel.name}-${channel.id}`}>
           <div className='searchbox-results-channel'>
             <img src={channel.pic_url}></img>
             <h2>{channel.name}</h2>
@@ -120,7 +120,7 @@ class Search extends React.Component {
     }
     if (users !== null) {
       userResults = users.map(user => (
-        <li onClick={this.handleSelectUser(user)} key={`${user.name}-${user.id}`}>
+        <li onMouseDown={this.handleSelectUser(user)} key={`${user.name}-${user.id}`}>
           <div className='searchbox-results-user'>
             <img src={user.profile_picture}></img>
             <h2>{user.username}</h2>
