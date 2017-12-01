@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.timestamps
     end
 
-    add_column :users, :profile_picture, :string, null: false, default: "https://thenib.imgix.net/usq/1d97429f-4a64-4d52-bfdb-c36172c05228/this-is-not-fine-001-dae9d5.png"
+    add_column :users, :profile_picture, :string, null: false, default: "https://cnet3.cbsistatic.com/img/hA56wVzzfGGZCrKODgOOnGVNQeM=/fit-in/970x0/2017/03/07/59b2d834-1c6f-4bea-811a-96f833f11751/corgioriginal.jpg"
     add_column :users, :stream_url, :string, null: false, default: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     add_column :users, :stream_title, :string, default: 'Check out my stream!'
     add_index :users, :username, unique: true
