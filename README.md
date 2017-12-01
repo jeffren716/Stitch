@@ -13,7 +13,7 @@ core features with more features being added in the future.
 * Follow your favorite streamers with the click of a button
 
 ## Site Navigation
-![navigation](https://imgur.com/ZcyLO8C.gif)
+![navigation](https://imgur.com/O67J4o0.gif)
 
 ## Streaming content for everybody
 
@@ -48,3 +48,15 @@ its parent nav bar component.
 
 However, the result is a fluid way to log in and stay logged in, given any location
 on the site that the user may be on.
+
+## Search
+
+Given the potentially large amount of channels and users that can be supported,
+a search function is imperative to supply the user with accessibility to any part
+of the site.  Whether it is general channel of content or a specific streamer the
+viewer wants to see, the search bar in the header handles all search queries.
+
+The search component is not store information within the Redux cycle.  It instead
+lies on the page as a presentational component that has its own internal state.
+This allows our application state to stay clean and manageable while using AJAX
+to keep searched channels/users and our actual channels/users separate.
