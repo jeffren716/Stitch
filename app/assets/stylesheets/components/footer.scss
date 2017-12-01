@@ -1,0 +1,19 @@
+.footer {
+  width: 15%;
+  height: 50px;
+  bottom: 0px;
+  position: fixed;
+  z-index: 5;
+  border-top: 2px solid #221e2d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.github-image {
+  width: 35px;
+}
+
+.linkedin-image {
+  width: 43px;
+}

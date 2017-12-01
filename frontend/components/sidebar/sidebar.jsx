@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import FollowIndexContainer from '../follow/follow_index_container';
+import Footer from '../footer/footer';
 
 class Sidebar extends React.Component {
 
@@ -13,6 +14,7 @@ class Sidebar extends React.Component {
         </div>
         <div className='sidebar-divider'></div>
         <FollowIndexContainer />
+        <Footer />
       </div>
     );
   }
