@@ -14,8 +14,9 @@ const createFollow = (follow) => ({
   follow
 });
 
-const removeFollow = () => ({
+const removeFollow = (followId) => ({
   type: REMOVE_FOLLOW,
+  followId
 });
 
 export const fetchFollows = () => dispatch => (

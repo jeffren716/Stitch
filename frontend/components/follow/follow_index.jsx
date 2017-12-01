@@ -12,7 +12,7 @@ class FollowIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props.follows);
+    let { deleteFollow } = this.props;
     if (this.props.follows !== []) {
       return(
         <div className='follow-index'>
@@ -23,6 +23,7 @@ class FollowIndex extends React.Component {
                   <FollowIndexItem
                     key={follow.id}
                     follow={follow}
+                    deleteFollow = {deleteFollow}
                   />
                 );
               })

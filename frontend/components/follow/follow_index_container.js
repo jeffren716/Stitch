@@ -9,7 +9,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-
   return({
     fetchFollows: () => dispatch(fetchFollows()),
     deleteFollow: (followId) => dispatch(deleteFollow(followId))
