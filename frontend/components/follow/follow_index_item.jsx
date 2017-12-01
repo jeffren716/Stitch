@@ -18,7 +18,6 @@ class FollowIndexItem extends React.Component {
   }
 
   render() {
-    console.log(this.props.follow);
     let { follow } = this.props;
     return(
       <div className='follow-index-item-div'>
