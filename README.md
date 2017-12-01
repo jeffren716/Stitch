@@ -13,7 +13,7 @@ core features with more features being added in the future.
 * Follow your favorite streamers with the click of a button
 
 ## Site Navigation
-![navigation](https://imgur.com/exg9w0I.gif)
+![navigation](https://imgur.com/exg9w0I.gif 'Happy little gifs')
 
 ## Streaming content for everybody
 
@@ -39,11 +39,18 @@ ultimately resulted in a method being passed down to the modal that let it updat
 its parent nav bar component.
 
 ```javascript
+// navbar.jsx
+
+...
+
 <ModalContainer
   processForm={this.state.processForm}
   isOpen={this.state.isOpen}
   handleCloseModal={this.handleCloseModal.bind(this)}
 />
+
+...
+
 ```
 
 However, the result is a fluid way to log in and stay logged in, given any location
@@ -60,3 +67,53 @@ The search component is not store information within the Redux cycle.  It instea
 lies on the page as a presentational component that has its own internal state.
 This allows our application state to stay clean and manageable while using AJAX
 to keep searched channels/users and our actual channels/users separate.
+
+![search](https://imgur.com/0lCIfnz.gif 'scrollable dropdown!')
+
+## Follow users
+
+This site relies heavily on users interacting with other users whether that be
+through streaming or watching.  Thus, following is an integral aspect to support
+and encourage user interaction.  Follows are utilized through a follow table and user
+associations
+
+```ruby
+# schema.rb
+
+create_table "follows", force: :cascade do |t|
+  t.integer "user_id", null: false
+  t.integer "follower_id", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["follower_id"], name: "index_follows_on_follower_id"
+  t.index ["user_id"], name: "index_follows_on_user_id"
+end
+
+```
+
+```ruby
+# user.rb
+
+has_many :follows,
+primary_key: :id,
+foreign_key: :follower_id,
+class_name: :Follow
+
+has_many :followers,
+primary_key: :id,
+foreign_key: :user_id,
+class_name: :Follow
+
+has_many :followed_users,
+through: :follows,
+source: :followee
+
+```
+
+Naming your associations in an understandable scope as to see who is the follower
+and who is the followee as well as which follow belongs to which user.  Add through
+associations into the mix and eventually results in...
+
+![help](https://imgur.com/O67J4o0.gif 'help')
+
+Once follows becomes part of the state, implementation is much easier
