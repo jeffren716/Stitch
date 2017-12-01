@@ -26,7 +26,7 @@ Because of that, log in utilizes a homebrew modal that persists on every page of
 the site.  Furthermore, logging in shouldn't interrupt any content the user is
 viewing with the only exception being if they are on the splash page.
 
-```
+```javascript
 if (nextProps.loggedIn && this.props.history.location.pathname === '/') {
   this.props.history.push('/directory');
 }
@@ -38,7 +38,7 @@ to dynamically update the nav bar.  This posed some issues during development an
 ultimately resulted in a method being passed down to the modal that let it update
 its parent nav bar component.
 
-```
+```javascript
 <ModalContainer
   processForm={this.state.processForm}
   isOpen={this.state.isOpen}
