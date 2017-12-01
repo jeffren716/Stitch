@@ -1,24 +1,16 @@
-# README
+# [Stitch](stitch-tv.herokuapp.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Stitch is a video streaming platform inspired by Twitch.  Various technologies
+including Rails, React, Redux, and PostgreSQL were utilized to build this project
+from the ground up over a 10 day period.  The current version displays a few
+core features with more features being added in the future.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+* Secure user authentication
+* Stream both live and recorded video
+* Search the wide range of channels and streamers
+* Follow your favorite streamers with the click of a button
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Site Navigation
+![navigation](https://i.imgur.com/a8ALSHJ.gifv 'Site navigation')
