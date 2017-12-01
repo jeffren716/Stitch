@@ -9,7 +9,7 @@
 }
 
 .follow-index::-webkit-scrollbar {
-  width: 0 !important
+  width: 0
 }
 
 .follow-index ul {
@@ -21,7 +21,7 @@
   cursor: pointer;
   width: calc(100% - 20px);
   border-radius: 5px;
-  transition-duration: 0.3s
+  transition-duration: 0.3s;
 }
 
 .follow-index-item:hover {
@@ -46,4 +46,8 @@
 .follow-info-username {
   font-weight: 700;
   border-bottom: 2px solid $lightest-purple;
+}
+
+.follow-info-header {
+  padding-left: 5px;
 }
