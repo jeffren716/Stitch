@@ -13,4 +13,4 @@ core features with more features being added in the future.
 * Follow your favorite streamers with the click of a button
 
 ## Site Navigation
-![alt text](https://i.imgur.com/O67J4o0.gif 'Site navigation')
+![alt text](https://imgur.com/rrdr1oQ.gif 'Site navigation')
