@@ -9,6 +9,12 @@
 
 .user-info {
   display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid $purple;
+}
+
+.user-info-left {
+  display: flex;
 }
 
 .user-info img {
@@ -24,4 +30,36 @@
 .user-info-username {
   font-weight: 700;
   border-bottom: 2px solid $purple;
+}
+
+.user-info-warning {
+  position: relative;
+}
+
+.user-info-follow-warning-button {
+  cursor: not-allowed;
+  margin-right: 7px;
+  padding: 7px 14px;
+  background-color: $light-purple;
+  border: none;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.user-info-follow-tooltip {
+  opacity: 0;
+  transition-duration: 0.3s;
+  position: absolute;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  right: 90px;
+  bottom: 24px;
+  padding: 8px 14px;
+}
+
+.user-info-follow-warning:hover .user-info-follow-tooltip {
+  opacity: 1;
+  transition-duration: 0.3s;
 }

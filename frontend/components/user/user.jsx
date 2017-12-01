@@ -40,7 +40,12 @@ class User extends React.Component {
       );
     } else {
       return(
-        <div className='user-info-follow-warning'>Follow</div>
+        <div className='user-info-follow-warning'>
+          <button className='user-info-follow-warning-button'>
+            Follow
+          </button>
+          <div className='user-info-follow-tooltip'>Please log in first</div>
+        </div>
       );
     }
   }
@@ -62,10 +67,12 @@ class User extends React.Component {
             allowFullScreen='true'>
           </iframe>
           <div className='user-info'>
-            <img src={user.profile_picture}></img>
-            <div className='user-info-header'>
-              <h1 className='user-info-username'>{user.username}</h1>
-              <h2>{user.stream_title}</h2>
+            <div className='user-info-left'>
+              <img src={user.profile_picture}></img>
+              <div className='user-info-header'>
+                <h1 className='user-info-username'>{user.username}</h1>
+                <h2>{user.stream_title}</h2>
+              </div>
             </div>
             {
               this.handleFollow()

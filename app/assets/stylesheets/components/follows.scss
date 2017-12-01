@@ -68,5 +68,19 @@
 }
 
 .follow-index-empty {
+  padding: 10px;
+}
 
+.user-info-follow-button button {
+  margin-right: 7px;
+  padding: 7px 14px;
+  background-color: $light-purple;
+  border: none;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.user-info-follow-button button:hover {
+  transition-duration: 0.5s;
+  background-color: $lightest-purple;
 }
