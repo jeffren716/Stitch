@@ -9,6 +9,11 @@ class Api::IrcsController < ApplicationController
     end
   end
 
+  def show
+    @irc = Irc.find_by(id: params[:user_id])
+    @message = Message.new
+  end
+
   private
 
   def irc_params
